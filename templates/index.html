@@ -215,11 +215,30 @@ footer {
   <p>Two major cancers affecting women worldwide. Early detection and awareness programs help improve survival rates.</p>
   
   <!-- FILE UPLOAD -->
-  <div class="file-upload">
-    <label class="file-upload-label" for="fileInput"><i class="fa fa-upload"></i> Upload a File</label>
-    <input type="file" id="fileInput">
-    <div class="file-name" id="fileName">No file chosen</div>
-  </div>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+
+<div class="file-upload">
+
+<label class="file-upload-label">
+<i class="fa fa-upload"></i> Upload Breast Image
+<input type="file" name="image" accept="image/*" required>
+</label>
+
+<br><br>
+
+<button class="btn btn-primary" type="submit">
+Analyze Image
+</button>
+
+</div>
+
+</form>
+
+{% if prediction %}
+
+<h2 style="margin-top:20px;">Result: {{ prediction }}</h2>
+
+{% endif %}
 </section>
 
 <!-- ABOUT -->
