@@ -3,7 +3,6 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-# Create Flask app
 app = Flask(__name__)
 
 # Load trained model
@@ -20,37 +19,39 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
 
-    # Get uploaded image
+    if "image" not in request.files:
+        return render_template("index.html", prediction="No file uploaded")
+
     file = request.files["image"]
+
+    if file.filename == "":
+        return render_template("index.html", prediction="No image selected")
 
     # Open image
     img = Image.open(file)
 
-    # Resize image for model
-    img = img.resize((224, 224))
+    # Resize for model
+    img = img.resize((224,224))
 
     # Convert to array
-    img = np.array(img)
+    img_array = np.array(img)
 
-    # Normalize pixel values
-    img = img / 255.0
+    # Normalize
+    img_array = img_array / 255.0
 
-    # Expand dimensions
-    img = np.expand_dims(img, axis=0)
+    # Expand dimension
+    img_array = np.expand_dims(img_array, axis=0)
 
-    # Make prediction
-    prediction = model.predict(img)
+    # Predict
+    prediction = model.predict(img_array)
 
-    # Convert prediction to label
     if prediction[0][0] > 0.5:
         result = "Malignant (Cancer Detected)"
     else:
         result = "Benign (No Cancer Detected)"
 
-    # Send result to webpage
     return render_template("index.html", prediction=result)
 
 
-# Run server
 if __name__ == "__main__":
     app.run(debug=True)
