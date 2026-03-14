@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CancerCare | Breast & Cervical Cancer Awareness</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+padding:15px;
+z-index:1000;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#e91e63;
+}
+
+.nav-menu{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.nav-menu a:hover{
+color:#e91e63;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:linear-gradient(135deg,#ff4081,#9c27b0);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+text-decoration:none;
+font-size:16px;
+margin:10px;
+cursor:pointer;
+}
+
+.btn-primary{
+background:white;
+color:#e91e63;
+}
+
+.btn-secondary{
+background:transparent;
+border:2px solid white;
+color:white;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+color:#9c27b0;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card i{
+font-size:40px;
+color:#e91e63;
+margin-bottom:15px;
+}
+
+/* LISTS */
+
+ul{
+line-height:1.8;
+}
+
+/* FILE VIEWER */
+
+.file-viewer{
+margin-top:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+border-radius:10px;
+overflow:hidden;
+}
+
+/* FILE UPLOAD */
+
+.upload-box{
+text-align:center;
+margin-bottom:20px;
+}
+
+.upload-box input{
+padding:10px;
+border-radius:5px;
+}
+
+/* STATS */
+
+.stats{
+background:#fff0f6;
+text-align:center;
+}
+
+.stat-number{
+font-size:40px;
+color:#e91e63;
+font-weight:bold;
+}
+
+/* CTA */
+
+.cta{
+background:#e91e63;
+color:white;
+text-align:center;
+}
+
+.cta h2{
+font-size:32px;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">CancerCare</div>
+
+<ul class="nav-menu">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#breast">Breast Cancer</a></li>
+<li><a href="#cervical">Cervical Cancer</a></li>
+<li><a href="#detection">Detection</a></li>
+<li><a href="#symptoms">Symptoms</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Breast & Cervical Cancer Awareness</h1>
+
+<p>
+Two major cancers affecting women worldwide.  
+Early detection and awareness programs help improve survival rates and reduce mortality.
+</p>
+
+<a href="#about" class="btn btn-primary">
+<i class="fa-solid fa-book"></i> Learn More
+</a>
+
+<a href="#awareness" class="btn btn-secondary">
+<i class="fa-solid fa-file"></i> Upload Awareness File
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT CANCER -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">Understanding Cancer</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-dna"></i>
+<h3>Uncontrolled Cell Growth</h3>
+<p>Cancer occurs when abnormal cells multiply rapidly without regulation.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-virus"></i>
+<h3>Tumor Formation</h3>
+<p>Abnormal cells accumulate forming masses that invade surrounding tissues.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-arrow-trend-up"></i>
+<h3>Metastasis</h3>
+<p>Cancer can spread to distant organs through blood or lymphatic systems.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FILE UPLOAD & VIEWER -->
+
+<section id="awareness">
+
+<div class="container">
+
+<h2 class="section-title">Upload Cancer Awareness Document</h2>
+
+<p style="text-align:center">
+Upload a PDF file to display the cancer awareness document.
+</p>
+
+<div class="upload-box">
+
+<input type="file" id="fileUpload" accept="application/pdf">
+
+</div>
+
+<div class="file-viewer">
+
+<iframe id="pdfViewer" width="100%" height="600"></iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BREAST CANCER -->
+
+<section id="breast">
+
+<div class="container">
+
+<h2 class="section-title">Breast Cancer</h2>
+
+<p>
+Breast cancer develops in breast tissue, particularly in milk ducts or lobules. 
+It is one of the most common cancers among women worldwide.
+</p>
+
+<ul>
+
+<li>Lump or thickening in breast</li>
+<li>Change in breast size or shape</li>
+<li>Skin dimpling or redness</li>
+<li>Nipple discharge</li>
+<li>Persistent breast pain</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- CERVICAL CANCER -->
+
+<section id="cervical">
+
+<div class="container">
+
+<h2 class="section-title">Cervical Cancer</h2>
+
+<p>
+Cervical cancer develops in the cervix and is primarily caused by HPV infection.
+</p>
+
+<ul>
+
+<li>Abnormal vaginal bleeding</li>
+<li>Pain during intercourse</li>
+<li>Unusual vaginal discharge</li>
+<li>Pelvic pain</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- DETECTION -->
+
+<section id="detection">
+
+<div class="container">
+
+<h2 class="section-title">Detection Methods</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-user-doctor"></i>
+<h3>Clinical Examination</h3>
+<p>Doctors check for lumps and abnormalities.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-x-ray"></i>
+<h3>Mammography</h3>
+<p>X-ray imaging used for early detection of breast cancer.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-microscope"></i>
+<h3>Pap Smear</h3>
+<p>Test that detects abnormal cervical cells early.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SYMPTOMS -->
+
+<section id="symptoms">
+
+<div class="container">
+
+<h2 class="section-title">Common Symptoms</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-circle-exclamation"></i>
+<p>Lump in breast</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-circle-exclamation"></i>
+<p>Breast swelling</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-circle-exclamation"></i>
+<p>Abnormal vaginal bleeding</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-circle-exclamation"></i>
+<p>Pelvic pain</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container">
+
+<h2 class="section-title">Why Early Detection Matters</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="stat-number">40%</div>
+<p>Mortality reduction with screening</p>
+</div>
+
+<div class="card">
+<div class="stat-number">90%</div>
+<p>Five-year survival if detected early</p>
+</div>
+
+<div class="card">
+<div class="stat-number">70%</div>
+<p>Cases preventable with vaccination</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Get Screened and Stay Safe</h2>
+
+<p>Regular screening and awareness can save lives.</p>
+
+<a class="btn btn-primary" href="#home">Back to Top</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 CancerCare Awareness Project</p>
+
+</footer>
+
+<script>
+
+/* FILE UPLOAD VIEWER */
+
+const fileUpload = document.getElementById("fileUpload");
+const viewer = document.getElementById("pdfViewer");
+
+fileUpload.addEventListener("change", function(){
+
+const file = this.files[0];
+
+if(file){
+
+const fileURL = URL.createObjectURL(file);
+viewer.src = fileURL;
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
