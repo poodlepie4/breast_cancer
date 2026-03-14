@@ -211,8 +211,35 @@ footer {
 
 <!-- HOME -->
 <section id="home" class="section active hero">
-  <h1>Breast & Cervical Cancer Awareness</h1>
-  <p>Two major cancers affecting women worldwide. Early detection and awareness programs help improve survival rates.</p>
+
+<h1>Breast & Cervical Cancer Awareness</h1>
+
+<p>Two major cancers affecting women worldwide. Early detection and awareness programs help improve survival rates.</p>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+
+<div class="file-upload">
+
+<label class="file-upload-label">
+<i class="fa fa-upload"></i> Upload Breast Image
+<input type="file" name="image" accept="image/*" required>
+</label>
+
+<br><br>
+
+<button class="btn btn-primary" type="submit">
+Analyze Image
+</button>
+
+</div>
+
+</form>
+
+{% if prediction %}
+<h2>Result: {{ prediction }}</h2>
+{% endif %}
+
+</section>
   
   <!-- FILE UPLOAD -->
   <form action="/predict" method="post" enctype="multipart/form-data">
@@ -317,16 +344,7 @@ function showSection(sectionId) {
 }
 
 // File upload display
-const fileInput = document.getElementById('fileInput');
-const fileName = document.getElementById('fileName');
 
-fileInput.addEventListener('change', () => {
-  if (fileInput.files.length > 0) {
-    fileName.textContent = fileInput.files[0].name;
-  } else {
-    fileName.textContent = "No file chosen";
-  }
-});
 </script>
 
 </body>
